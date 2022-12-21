@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('landing/welcome');
 });
 
+Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'indexHome'])->name('indexHome');
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+

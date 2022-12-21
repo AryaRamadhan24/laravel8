@@ -37,11 +37,11 @@
                                                     Me</label>
                                             </div>
                                         </div> -->
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
-                                            Login
-                                        </a>
                                         <hr>
                                     </form>
+                                    <a href="{{ route('indexHome') }}" class="btn btn-primary btn-user btn-block">
+                                            Login
+                                        </a>
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="{{ route('register') }}">Create an Account!</a>
