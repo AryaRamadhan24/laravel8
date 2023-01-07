@@ -23,3 +23,8 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+Route::get('/sapi', [App\Http\Controllers\SapiController::class, 'index'])->name('sapi');
+
+Route::get('/penyakit', [App\Http\Controllers\PenyakitController::class, 'index'])->name('penyakit');
+
+Route::get('/gejala', [App\Http\Controllers\GejalaController::class, 'index'])->name('gejala');
