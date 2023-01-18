@@ -4,9 +4,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('indexHome')}}">
                 <div class="sidebar-brand-icon">
-                    <i class="fas fa-file-archive"></i>
+                    <i class="fa fa-heartbeat"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">E-ARSIP<sup></sup></div>
+                <div class="sidebar-brand-text mx-3">SISTEM PAKAR<sup></sup></div>
             </a>
 
             <!-- Divider -->
