@@ -21,7 +21,7 @@ Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'indexHome
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/sapi', [App\Http\Controllers\SapiController::class, 'index'])->name('sapi');
 
