@@ -26,5 +26,7 @@ Auth::routes();
 Route::get('/sapi', [App\Http\Controllers\SapiController::class, 'index'])->name('sapi');
 
 Route::get('/penyakit', [App\Http\Controllers\PenyakitController::class, 'index'])->name('penyakit');
+Route::get('/tambahpenyakit', [App\Http\Controllers\PenyakitController::class, 'create'])->name('tambahpenyakit');
+Route::post('/storepenyakit', [App\Http\Controllers\PenyakitController::class, 'store'])->name('storepenyakit');
 
 Route::get('/gejala', [App\Http\Controllers\GejalaController::class, 'index'])->name('gejala');

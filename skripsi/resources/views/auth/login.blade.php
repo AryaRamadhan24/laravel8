@@ -53,7 +53,7 @@
                                     <button type="submit" class="btn btn-primary btn-user btn-block">
                                             Login
                                     </button>
-                                    </form>
+                                    </form> 
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="{{ route('register') }}">Create an Account!</a>
