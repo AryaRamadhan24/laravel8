@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::get('/tambahpenyakit', [App\Http\Controllers\PenyakitController::class, '
 Route::post('/storepenyakit', [App\Http\Controllers\PenyakitController::class, 'store'])->name('storepenyakit');
 
 Route::get('/gejala', [App\Http\Controllers\GejalaController::class, 'index'])->name('gejala');
+Route::get('/tambahgejala', [App\Http\Controllers\GejalaController::class, 'create'])->name('tambahgejala');
+Route::post('/storegejala', [App\Http\Controllers\GejalaController::class, 'store'])->name('storegejala');

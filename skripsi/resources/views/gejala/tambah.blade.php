@@ -5,28 +5,29 @@
     <div class="container">
         <div class="card o-hidden border-0 shadow-lg my-2">
             <div class="card-body p-0">
-                <form method="POST" action="{{ route('storepenyakit') }}">
+                <form method="POST" action="{{ route('storegejala') }}">
                     @csrf
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Tambah Penyakit</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Tambah Gejala</h1>
                             </div>
                                 <div class="form-group row">
-                                    <div class="col-sm-12 mb-3 mb-sm-0">Nama Penyakit
-                                    <select name="kecamatan" id="" class="form-control form-control-user">
+                                    <div class="col-sm-12 mb-3 mb-sm-0">Nama Atribut
+                                    <select name="atribut" id="" class="form-control form-control-user">
+                                            <option value="">pilih atribut</option>
                                             @foreach ($data as $item)
-                                            <option value="{{ $item->id_kecamatan }}">{{ $item->nama_kecamatan }}</option>
+                                            <option value="{{ $item->id_atribut }}">{{ $item->nama_atribut }}</option>
                                             @endforeach
                                         </select>
                                     </div>
                                 </div>
-                                <div class="form-group row">">
-                                    <div class="col-sm-12 mb-3 mb-sm-0
-                                        Penjelasan Penyakit
-                                        <input id="name" type="text" class="form-control form-control-user" placeholder="Nama" name="penjelasan" value="{{ old('name') }}" required autocomplete="name">
+                                <div class="form-group row">
+                                    <div class="col-sm-12 mb-3 mb-sm-0">
+                                        Gejala
+                                        <input id="name" type="text" class="form-control form-control-user" placeholder="Nama" name="nama gejala" value="{{ old('name') }}" required autocomplete="name">
                                         </input>
                                     </div>
                                 </div>
@@ -40,7 +41,7 @@
                             </form>
                             <div class="form-group">
                                 <div class="col-sm-12 mb-3 mb-sm-0">
-                                    <a href="{{ route('penyakit') }}" class="btn btn-warning btn-user btn-block">
+                                    <a href="{{ route('gejala') }}" class="btn btn-warning btn-user btn-block">
                                     {{ __('Cancel') }}
                                     </a>
                                 </div>
