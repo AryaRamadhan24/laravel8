@@ -13,8 +13,11 @@ class Gejala extends Migration
      */
     public function up()
     {
-        Schema::create('gejala', function (Blueprint $table) {
-            $table->id();
+        Schema::create('gejalas', function (Blueprint $table) {
+            $table->increments('id_gejala');
+            $table->string('nama_gejala');
+            $table->integer('id_atribut')->unsigned();
+            $table->foreign('id_atribut')->references('id_atribut')->on('atributs');
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class Gejala extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('gejala');
+        Schema::dropIfExists('gejalas');
     }
 }
