@@ -13,8 +13,11 @@ class GejalaController extends Controller
         $data = DB::table('gejalas')
         ->select('gejalas.nama_gejala')
         ->get();
+        $datas = DB::table('atributs')
+        ->select('atributs.nama_atribut')
+        ->get();
 
-        return view('gejala.index', ['data' => $data]);
+        return view('gejala.index', ['data' => $data], ['datas' => $datas]);
     }
 
     public function create()
