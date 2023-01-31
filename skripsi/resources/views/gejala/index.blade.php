@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="row">
-        @foreach ($datas as $items)
+    @foreach ($datas as $items)
         <div class="col-12 mb-5">
             <div class="card">
                 <div class="card-header">
@@ -37,8 +37,11 @@
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
+
                             <tbody>
                                 <tr>
+                                    <td></td>
+                                    <td></td>
                                     <td>
                                         <a href=""><div class="btn btn-outline-warning btn-rounded btn-sm"><i class="fas fa-edit"></i></div></a>
                                         <a href=""><div class="btn btn-outline-danger btn-rounded btn-sm"><i class="fa fa-trash"></i></div></a>
