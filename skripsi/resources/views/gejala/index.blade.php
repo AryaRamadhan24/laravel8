@@ -32,16 +32,14 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Nama Sapi</th>
-                                    <th>Kondisi sapi</th>
+                                    <th>Nama Gejala</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 <tr>
-                                    <td></td>
-                                    <td></td>
+                                    <td></td>   
                                     <td>
                                         <a href=""><div class="btn btn-outline-warning btn-rounded btn-sm"><i class="fas fa-edit"></i></div></a>
                                         <a href=""><div class="btn btn-outline-danger btn-rounded btn-sm"><i class="fa fa-trash"></i></div></a>
