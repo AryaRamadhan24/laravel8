@@ -25,8 +25,8 @@
         <div class="col-12 mb-5">
             <div class="card">
                 <div class="card-header">
-                    <h6 class="m-0 font-weight-bold text-primary">{{$items->nama_atribut}}</h6>
-                </div>
+                    <h6 class="m-0 font-weight-bold text-primary">{{$items['atribut']->nama_atribut}}</h6>
+                </div>  
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -38,13 +38,15 @@
                             </thead>
 
                             <tbody>
-                                <tr>
-                                    <td></td>   
+                               @foreach ($items['gejala'] as $it)
+                               <tr>
+                                    <td>{{$it->nama_gejala}}</td>       
                                     <td>
                                         <a href=""><div class="btn btn-outline-warning btn-rounded btn-sm"><i class="fas fa-edit"></i></div></a>
                                         <a href=""><div class="btn btn-outline-danger btn-rounded btn-sm"><i class="fa fa-trash"></i></div></a>
                                     </td>
                                 </tr>
+                               @endforeach
                             </tbody>
                         </table>
                     </div>
