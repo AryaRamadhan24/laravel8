@@ -42,7 +42,7 @@
                                <tr>
                                     <td>{{$it->nama_gejala}}</td>       
                                     <td>
-                                        <a href=""><div class="btn btn-outline-warning btn-rounded btn-sm"><i class="fas fa-edit"></i></div></a>
+                                        <a href="{{ url('/editgejala/' . $it->id_gejala) }}"><div class="btn btn-outline-warning btn-rounded btn-sm"><i class="fas fa-edit"></i></div></a>
                                         <a href=""><div class="btn btn-outline-danger btn-rounded btn-sm"><i class="fa fa-trash"></i></div></a>
                                     </td>
                                 </tr>

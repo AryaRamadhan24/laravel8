@@ -37,3 +37,4 @@ Route::get('/deletepenyakit/{id}', [PenyakitController::class, 'destroy']);
 Route::get('/gejala', [App\Http\Controllers\GejalaController::class, 'index'])->name('gejala');
 Route::get('/tambahgejala', [App\Http\Controllers\GejalaController::class, 'create'])->name('tambahgejala');
 Route::post('/storegejala', [App\Http\Controllers\GejalaController::class, 'store'])->name('storegejala');
+Route::get('/editgejala/{id}', [App\Http\Controllers\GejalaController::class, 'edit']);

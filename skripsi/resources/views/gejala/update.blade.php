@@ -16,10 +16,9 @@
                             </div>
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">Nama Atribut
-                                    <select name="atribut" id="" class="form-control form-control-user">
-                                            <option value="">pilih atribut</option>
+                                        <select name="atribut" id="" class="form-control form-control-user">
                                             @foreach ($data as $item)
-                                            <option value="{{ $item->id_atribut }}">{{ $item->nama_atribut }}</option>
+                                            <option value="{{$item['atribut']->id_atribut}}">{{$item['atribut']->nama_atribut}}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -27,7 +26,7 @@
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
                                         Gejala
-                                        <input id="name" type="text" class="form-control form-control-user" placeholder="Nama" name="nama gejala" value="{{ old('name') }}" required autocomplete="name">
+                                        <input id="name" type="text" class="form-control form-control-user" placeholder="Nama" name="nama gejala" value="{{$item['gejala']->nama_gejala}}" required autocomplete="name">
                                         </input>
                                     </div>
                                 </div>
