@@ -39,14 +39,14 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="{{route('penyakit')}}">Daftar Penyakit</a>
                 <a class="collapse-item" href="{{route('gejala')}}">Daftar Gejala</a>
-                <a class="collapse-item" href="{{route('sapi')}}">Data Sapi</a>
+                {{-- <a class="collapse-item" href="{{route('sapi')}}">Data Sapi</a> --}}
                 <a class="collapse-item" href="">Riwayat</a>
             </div>
         </div>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="">
+        <a class="nav-link" href="{{route('diagnosa')}}">
             <i class="fas fa-fw fa-chart-area"></i>
                 <span>Diagnosa</span>
         </a>

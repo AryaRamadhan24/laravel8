@@ -49,27 +49,39 @@ class GejalaController extends Controller
 
     public function edit($id)
     {
-        $atribut = Atributs::where('id_atribut', '!=', 1)->where('id_atribut', '!=', 2)->where('id_atribut', $id)->get();
-        // return $datas;
-        $data = [];
-        foreach ($atribut as $dt) {
-            $tmpData = Gejalas::where('id_atribut', $dt->id_atribut)->get();
-            $map['atribut'] = $dt;
-            $map['gejala'] = $tmpData;
-            array_push($data, $map);
-        }
+        // $atribut = Atributs::where('id_atribut', '!=', 1)->where('id_atribut', '!=', 2)->get();
+        // return $atribut;
+        // $data = [];
+        $data = Gejalas::join('atributs', 'atributs.id_atribut', 'gejalas.id_atribut')
+            ->select('gejalas.*', 'atributs.nama_atribut')        
+        ->where('gejalas.id_gejala', $id)->first();
+        
+        // foreach ($atribut as $dt) {
+          
+        //     $map['atribut'] = $dt;
+        //     $map['gejala'] = $tmpData;
+        //     array_push($data, $map);
+        // }
         //return $data;
 
-        return view('gejala.update', ['data' => $data], ['datas' => $data]);
+        return view('gejala.update', ['data' => $data,]);
     }
 
     public function update(Request $request, $id)
     {
-        $data = \App\Models\Gejalas::where('id',$id)->first();
-        $data->nama_penyakit = $request->input('nama_penyakit'); 
-        $data->penjelasan = $request->input('penjelasan');
-        $data->save();
+        // return $id;
+        // $data = \App\Models\Gejalas::where('id_gejala',$id)->first(); 
+        // $data->nama_gejala = $request->input('nama_gejala');
+        // $data->save();
+        Gejalas::where('id_gejala', $id)->update(['nama_gejala'=> $request->input('nama_gejala')]);
 
-        return redirect()->route('penyakit',['id'=>$id])->with('success', 'Data Berhasil diupdate');
+        return redirect()->route('gejala',['id_gejala'=>$id])->with('success', 'Data Berhasil diupdate');
+    }
+
+    public function destroy($id)
+    {
+        Gejalas::where('id_gejala', $id)->delete();
+
+        return redirect()->route('gejala');
     }
 }

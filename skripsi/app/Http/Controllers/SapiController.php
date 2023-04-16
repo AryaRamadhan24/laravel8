@@ -10,4 +10,9 @@ class SapiController extends Controller
     {
         return view('sapi.index');
     }
+
+    public function create()
+    {
+        return view('sapi.tambah');
+    }
 }
