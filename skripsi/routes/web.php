@@ -48,3 +48,4 @@ Route::put('/updategejala/{id}', [GejalaController::class, 'update']);
 Route::get('/deletegejala/{id}', [GejalaController::class, 'destroy']);
 
 Route::get('/diagnosa', [App\Http\Controllers\DiagnosaController::class, 'index'])->name('diagnosa');
+Route::post('/diagnosa', [App\Http\Controllers\DiagnosaController::class, 'store'])->name('diagnosa');
