@@ -34,7 +34,8 @@
                                     </div>
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         Kondisi
-                                        <select name="gejala[]" id="" class="form-control form-control-user">
+                                        <select name="gejala[{{$item['atrribut']->id_atribut}}][]"
+                                            id="multiple-select-field" required class="form-select" multiple="multiple">
                                             <option value="" selected>Pilih Gejala</option>
                                             @foreach ($item['gejala'] as $it)
 
@@ -68,4 +69,12 @@
     </div>
     </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+        $('#multiple-select-fields').multiselect({
+          includeSelectAllOption: true,
+        });
+    });
+    </script>
     @endsection
