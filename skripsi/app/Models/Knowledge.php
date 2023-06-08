@@ -9,5 +9,5 @@ class Knowledge extends Model
 {
     use HasFactory;
     protected $table = "knowledges";
-    protected $fillable = ['knowledge_code', 'total_bobot', 'total_similarity'];
+    protected $fillable = ['knowledge_code', 'total_bobot', 'total_similarity','penyakit_id','type'];
 }

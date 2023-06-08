@@ -4,6 +4,7 @@ use App\Http\Controllers\PenyakitController;
 use App\Http\Controllers\GejalaController;
 use App\Http\Controllers\SapiController;
 use App\Http\Controllers\DiagnosaController;
+use App\Http\Controllers\SolusiController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -46,6 +47,9 @@ Route::post('/storegejala', [App\Http\Controllers\GejalaController::class, 'stor
 Route::get('/editgejala/{id}', [GejalaController::class, 'edit']);
 Route::put('/updategejala/{id}', [GejalaController::class, 'update']);
 Route::get('/deletegejala/{id}', [GejalaController::class, 'destroy']);
+
+//solusi
+Route::resource('solusi', SolusiController::class);
 
 Route::get('/diagnosa', [App\Http\Controllers\DiagnosaController::class, 'index'])->name('diagnosa');
 Route::post('/diagnosa', [App\Http\Controllers\DiagnosaController::class, 'store'])->name('diagnosa');
