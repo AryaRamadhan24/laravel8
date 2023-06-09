@@ -27,7 +27,12 @@ class DiagnosaController extends Controller
             array_push($data, $push);
         }
         // return $data;
+<<<<<<< Updated upstream
         return view('diagnosa.index', compact('data', 'desease'));
+=======
+        
+        return view('diagnosa.index', compact('data'),);
+>>>>>>> Stashed changes
     }
 
     public function store(Request $request)

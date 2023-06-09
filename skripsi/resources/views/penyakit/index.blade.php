@@ -12,7 +12,7 @@
                         <h1 class="h4 text-gray-900 mb-4">Daftar Penyakit</h1>
                     </div>
                 </div>
-                <div class="col-lg-2">
+                <div class="row-md-1">
                     <a href="{{ route('tambahpenyakit') }}" class="btn btn-outline-primary btn-rounded btn-fw"><i
                             class="fa fa-plus"></i> Tambah Data</a>
                 </div>

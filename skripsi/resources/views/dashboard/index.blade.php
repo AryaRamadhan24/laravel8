@@ -10,12 +10,12 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                Jumlah Admin</div>
+                                Jumlah Penyakit</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-user fa-2x text-gray-300"></i>
+                            <i class="fas fa fa-ambulance fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -28,12 +28,12 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                Jumlah Petugas</div>
+                                Jumlah Gejala</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-user-tie fa-2x text-gray-300"></i>
+                            <i class="fas fa-heartbeat fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -44,7 +44,7 @@
                 <div class="card-body">
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Jumlah Akun Warga
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Jumlah Sapi Sakit
                             </div>
                             <div class="row no-gutters align-items-center">
                                 <div class="col-auto">
@@ -54,10 +54,10 @@
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-users fa-2x text-gray-300"></i>
+                            <i class="fas fa-clinic-medical fa-2x text-gray-300"></i>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
         <!-- Pending Requests Card Example -->
@@ -67,12 +67,12 @@
                     <div class="row no-gutters align-items-center">
                         <div class="col mr-2">
                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                Jumlah Arsip</div>
+                                Jumlah User</div>
                             <div class="h5 mb-0 font-weight-bold text-gray-800">
                             </div>
                         </div>
                         <div class="col-auto">
-                            <i class="fas fa-folder-open fa-2x text-gray-300"></i>
+                            <i class="fas fa-user fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
@@ -81,11 +81,14 @@
     </div>
     <div class="card shadow mb-4">
         <div class="card-header py-3">
+            <div class="text-center">
+                <h1 class="h4 text-gray-900 mb-1">Admin</h1>
+            </div>
         </div>
         <div class="card-body">
             <div class="text-center">
-                <h1 class="h4 text-gray-900 mb-4">Admin</h1>
-            </div>
+            <h1 class="h2 text-gray-900 mb-1">Sistem Pakar Penyakit Sapi</h1>
+            <h1 class="h4 text-gray-900 mb-1">UD. Adil Brother's Senduro-Lumajang</h1>
     </div>  
 @else
 <!-- DataTales Example -->
