@@ -14,6 +14,16 @@
                                 <div class="text-center">
                                     <h1 class="h4 text-gray-900 mb-4">Diagnosa</h1>
                                 </div>
+
+
+                                @if (session('status'))
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                    <h5 class="alert-heading">Peringatan</h5>
+                                    Gejala tidak boleh kosong, periksa kembali inpuran anda!
+                                    <button class="btn-close" type="button" data-bs-dismiss="alert"
+                                        aria-label="Close"></button>
+                                </div>
+                                @endif
                                 {{-- <div class="form-group row">
                                     <select name="penyakit" required class="form-select">
                                         <option value="" selected>Pilih Penyakit</option>

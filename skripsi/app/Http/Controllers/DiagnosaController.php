@@ -27,16 +27,18 @@ class DiagnosaController extends Controller
             array_push($data, $push);
         }
         // return $data;
-<<<<<<< Updated upstream
-        return view('diagnosa.index', compact('data', 'desease'));
-=======
-        
+
         return view('diagnosa.index', compact('data'),);
->>>>>>> Stashed changes
     }
 
     public function store(Request $request)
     {
+
+        for ($i = 0; $i < count($request->gejala); $i++) {
+            if ($request->gejala[$i + 1][0] == null || $request->gejala[$i + 1] == null) {
+                return back()->with('status', 'Gejala tidak boleh kosong');
+            }
+        }
 
         try {
             // Proses perhitungan CBR
